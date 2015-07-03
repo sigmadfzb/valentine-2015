@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="format-detection" content="telephone=no">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta name="apple-touch-fullscreen" content="no">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="Description" content="澎湃，澎湃新闻，澎湃新闻网，新闻与思想，澎湃是植根于中国上海的时政思想类互联网平台，以最活跃的原创新闻与最冷静的思想分析为两翼，是互联网技术创新与新闻价值传承的结合体，致力于问答式新闻与新闻追踪功能的实践。">
+<meta name='Keywords' content="澎湃, 澎湃新闻,交互,动画,上海报业,东方早报,上海东方早报">
+<title>今天，让他/她看见我的告白！</title>
+<meta name="description" content="">
+<meta name="keywords" content="">
+<link href="assets/normal.css" rel="stylesheet">
+</head>
+<body>
+	<div class="audio-btn"></div>
+<div id="loading">
+	<div class="tip tc">
+        <p>今天，让他/她看见我的告白！</p>
+        <p class="loading-pic">
+            <img src="assets/loading.svg" alt="">
+        </p>
+    </div>
+    <div class="logo">
+    	<img src="assets/paper-logo.svg">
+    </div>
+    <audio id='audio' src="assets/audio.mp3" preload loop></audio>
+</div>
+<div class="container">
+	<div id="scroller">
+		<!-- person box -->
+		<div class="person-box">
+		</div>
+		<!-- wall box -->
+		<div class="wall">
+			<div class="page page1">
+				<img src="images/page1.jpg"/>
+				<div class="c-layer chendian">
+					<img src="images/page1-chendian.png"/>
+				</div>
+				<div class="c-layer chendian1">
+					<img src="images/page1-chendian1.png"/>
+				</div>
+				<div class="c-layer girl-head">
+					<img src="images/girl-head.png"/>
+				</div>
+				<div class="c-layer big-light light-shine">
+					<img src="images/big-light.png"/>
+				</div>
+				<div class="c-layer boy">
+					<img src="images/boy.png">
+				</div>
+				<div class="c-layer big-heart">
+					<div class="heart-bg ">
+						<img src="images/heart-bg.png" />
+					</div>
+					<div class="heart-shake light-shine">
+						<img src="images/heart-shake.png" />
+					</div>
+					<div class="heart-outer-dot">
+						<img src="images/heart-outer-dot.png" />
+					</div>
+					<div class="heart-loop" id="heart-loop"></div>
+				</div>
+			</div>
+			<div class="page page2">
+				<img src="images/page-bg.png"/>
+			</div>
+			<div class="page page3">
+				<img src="images/page-bg.png"/>
+			</div>
+			<div class="page page4">
+				<img src="images/page-bg.png"/>
+			</div>
+			<div class="page page5">
+				<img src="images/page-bg.png"/>
+			</div>
+			<div class="page page6">
+				<img src="images/page-bg.png"/>
+			</div>
+			<div class="page page7">
+				<img src="images/page-bg-m.jpg"/>
+			</div>
+			<div class="page page8">
+				<img src="images/page-bg.png"/>
+			</div>
+			<div class="page page9">
+				<img src="images/page-bg-f1.jpg"/>
+			</div>
+			<div class="page page10">
+				<img src="images/page-bg-final.jpg"/>
+			</div>
+		</div>
+		<!-- tip box -->
+		<div class="tip-box"></div>
+		<div class="game-box">
+			<div class="game game-tip-box">
+				<div class="game-bg">
+					<img src="images/curtain.png" width="100%">
+				</div>
+				<div class="game-tip">
+					<img src="images/game-tip.png"/>
+				</div>				
+			</div>
+			<div class="game game-form-box">
+				<div class="game-bg">
+					<img src="images/curtain.png" width="100%">
+				</div>
+				<div class="gaobai-input">
+					<textarea name="gaobai" id="gaobai-txtarea" cols="30" rows="10" placeholder=""></textarea>
+					<p id='final-gaobai'></p>
+					<p id="leastword">最多30字哦！</p>
+				</div>
+				<div class="phone-input">
+					<textarea name="phone" id="phone" placeholder="请在此填写手机号"></textarea>
+				</div>
+				<div class="gaobai-btn">
+					<button id="gaobai-btn"></button>
+				</div>
+				<div class="tijiao">
+					<button id="tijiao"></button>
+				</div>
+				<div id="final-tip"></div>
+			</div>
+		</div>
+		<div class="team">
+			<p>插画：李&nbsp&nbsp媛&nbsp&nbsp&nbsp&nbsp制作：国&nbsp&nbsp亮</p>
+		</div>
+		<div class="logo">
+			<a href="http://m.thepaper.cn/app">
+				<img src="images/paper-logo.png" width='100%'>
+			</a>
+		</div>
+	</div>	
+</div>
+<script src="http://image.thepaper.cn/html/static/js/jquery.js"></script>
+<script src="http://image.thepaper.cn/html/static/js/d3.js"></script>
+<script src="assets/iscroll-probe.js"></script>
+<script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+<script src="assets/main.js"></script> 
+<div style='display:none'>
+<script type="text/javascript">
+	var _hmt = _hmt || [];
+	(function() {
+	  var hm = document.createElement("script");
+	  hm.src = "//hm.baidu.com/hm.js?ed71d4f59acf2e79911e62bb5e9ab28e";
+	  var s = document.getElementsByTagName("script")[0]; 
+	  s.parentNode.insertBefore(hm, s);
+	})();
+</script>
+</div>
+</body>
+</html>
